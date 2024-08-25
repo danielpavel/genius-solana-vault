@@ -7,7 +7,7 @@ pub struct VaultConfig {
     pub mint: Pubkey,
 
     pub max_deposit: u64,
-    pub max_shares: u128,
+    pub max_shares: u64,
 
     pub shares_bump: u8,
     pub bump: u8,

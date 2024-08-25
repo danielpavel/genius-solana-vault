@@ -54,7 +54,7 @@ impl<'info> Initialize<'info> {
             fee: 300, // 3% fee = 300 basis points
             mint: self.mint.to_account_info().key(),
             max_deposit: u64::MAX,
-            max_shares: u128::MAX,
+            max_shares: u64::MAX,
             bump: bumps.config,
             shares_bump: bumps.shares_mint,
         });
