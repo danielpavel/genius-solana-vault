@@ -5,6 +5,8 @@ declare_id!("FnpUgSxeMQJAGYADfem4Zz7gf9i2sPJjYiK9ay8VBoJm");
 pub mod contexts;
 pub mod errors;
 pub mod state;
+pub mod constants;
+pub mod stake_liquidity;
 
 pub use contexts::*;
 
@@ -23,5 +25,14 @@ pub mod genius_vault {
     pub fn withdraw(ctx: Context<Transfer>, amount: u64) -> Result<()> {
         ctx.accounts.withdraw(amount)
     }
+
+    pub fn after_deposit(ctx: Context<LiquidityTransfer>, amount: u64) -> Result<()> {
+        ctx.accounts.after_deposit(amount)
+    }
+
+    // pub fn beforeWthdraw(ctx: Context<BeforeWithdraw>) -> Result<()> {
+    //     ctx.accounts.before_withdraw()
+    // }
+
 }
 

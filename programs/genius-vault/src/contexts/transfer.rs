@@ -1,7 +1,7 @@
 use anchor_lang::prelude::*;
 use anchor_spl::{
     token_interface::{Mint, TokenInterface, TokenAccount, TransferChecked, transfer_checked, MintTo, mint_to, Burn, burn}, 
-    associated_token::AssociatedToken
+    associated_token::AssociatedToken,
 };
 
 use crate::VaultConfig;
